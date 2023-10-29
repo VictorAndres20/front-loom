@@ -4,6 +4,7 @@ import InboxPage from "./content/inbox";
 import UsersPage from "./content/users";
 import LoginPage from "./login";
 import { content_path, generate_path, inbox_path, login_page_path, users_path } from "./path_pages";
+import AuthWrapper from '../hoc/auth_wrapper';
 
 /**
  * { 
@@ -32,7 +33,7 @@ export const router_pages = [
     },
     { 
         path: `${content_path.path}`, 
-        component: ContentTemplate, // This has <Outlet /> Component
+        component: AuthWrapper(ContentTemplate), // This has <Outlet /> Component
         children: [
             {
                 path: `${generate_path.path}`, 

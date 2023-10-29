@@ -25,7 +25,7 @@ export default function LoginForm(){
                 value={ hook.entity?.login }
                 type="text"
             />
-            <Form.Label>Contraseña</Form.Label>
+            <Form.Label style={{ marginTop: '20px' }}>Contraseña</Form.Label>
             <Form.Control
                 onKeyUp={pressEnter}
                 onChange={(e) => {
