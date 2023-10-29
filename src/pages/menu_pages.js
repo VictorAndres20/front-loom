@@ -1,27 +1,3 @@
-/**
- * If you need menu register
- */
-
-/*
-import {
-    facturabot_home_path, 
-    facturabot_info_path 
-} from "./path_pages";
-
-export const facturabot_menu = {
-    main: { 
-        label: 'Home',
-        path: `${facturabot_home_path.path}`,
-        fullPath: `${facturabot_home_path.full_path}`,
-    },
-    info: { 
-        label: 'Information',
-        path: `${facturabot_info_path.path}`,
-        fullPath: `${facturabot_info_path.full_path}`,
-    }
-}
-*/
-
 // Template
 /*
 import React from "react";
@@ -70,3 +46,26 @@ const FacturabotTemplate = () => {
 
 export default FacturabotTemplate;
 */
+import {
+    generate_path, 
+    inbox_path,
+    users_path 
+} from "./path_pages";
+
+export const content_menu = {
+    generate: { 
+        label: 'Crear solicitud',
+        path: `${generate_path.path}`,
+        fullPath: `${generate_path.full_path}`,
+    },
+    inbox: { 
+        label: 'Bandeja',
+        path: `${inbox_path.path}`,
+        fullPath: `${inbox_path.full_path}`,
+    },
+    users: { 
+        label: 'Usuarios',
+        path: `${users_path.path}`,
+        fullPath: `${users_path.full_path}`,
+    },
+}

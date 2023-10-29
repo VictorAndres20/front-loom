@@ -1,15 +1,12 @@
 import React from "react";
-import { Card, Col, Container, Navbar, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import LoginForm from "./form";
+import BasicNavbar from "../../widgets /navbars/basic_navbar";
 
 export default function LoginPage() {
     return(
         <div>
-            <Navbar style={{ background: '#2542ff' }} >
-                <Container>
-                    <div style={{ height: '50px', fontSize: '1.7em', color: 'white' }}>Solicitudes de telares</div>
-                </Container>
-            </Navbar>
+            <BasicNavbar />
             <Container style={{ marginTop: '50px' }}>
                 <Row>
                     <Col lg={4} md={2}>

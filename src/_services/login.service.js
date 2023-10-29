@@ -1,7 +1,7 @@
 import { handleFetch, POST_OPTIONS } from './base.service.js';
 
 
-const BASE_PATH = '/users';
+const BASE_PATH = '/login';
 
 
 export const login = async (body) => {

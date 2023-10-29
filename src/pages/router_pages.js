@@ -1,5 +1,9 @@
+import ContentTemplate from "./content/content_template";
+import GeneratePage from "./content/generate";
+import InboxPage from "./content/inbox";
+import UsersPage from "./content/users";
 import LoginPage from "./login";
-import { login_page_path } from "./path_pages";
+import { content_path, generate_path, inbox_path, login_page_path, users_path } from "./path_pages";
 
 /**
  * { 
@@ -26,6 +30,23 @@ export const router_pages = [
         path: `${login_page_path.path}`, 
         component: LoginPage, 
     },
-    // More pages
+    { 
+        path: `${content_path.path}`, 
+        component: ContentTemplate, // This has <Outlet /> Component
+        children: [
+            {
+                path: `${generate_path.path}`, 
+                component: GeneratePage,
+            },
+            {
+                path: `${inbox_path.path}`, 
+                component: InboxPage,
+            },
+            {
+                path: `${users_path.path}`, 
+                component: UsersPage,
+            },
+        ],
+    },
     
 ];
