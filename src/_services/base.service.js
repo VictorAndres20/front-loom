@@ -31,8 +31,8 @@ export const sendFetch = (path, options, body=null) => {
     return new Promise((resolve, reject) => {
         fetch(`${MAIN_API_HOST}${path}`,options)
         .then(res => {
-            console.log("Response: ");
-            console.log(res);
+            //console.log("Response: ");
+            //console.log(res);
             return res.json();
         })
         .then(json => resolve(json))
