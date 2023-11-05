@@ -2,6 +2,7 @@ import {
     findAllErrorDetail,
     findErrorDetailById,
     findAllErrorDetailPaged,
+    findAllErrorDetailByType,
 } from '../../_services/error_detail.service';
 
 export const findAllErrorDetailEvent = async () => {
@@ -10,6 +11,10 @@ export const findAllErrorDetailEvent = async () => {
 
 export const findErrorDetailByIdEvent = async (id) => {
     return await findErrorDetailById(id);
+}
+
+export const findAllErrorDetailByTypeEvent = async (type) => {
+    return await findAllErrorDetailByType(type);
 }
 
 export const findAllErrorDetailPagedEvent = async (page, limit = 8) => {

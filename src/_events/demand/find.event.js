@@ -2,7 +2,14 @@ import {
     findAllDemand,
     findDemandById,
     findAllDemandPaged,
+    findAllDemandByErrorType,
+    pdfById,
+    findAllDemandPending,
 } from '../../_services/demand.service';
+
+export const findAllDemandPendingEvent = async () => {
+    return await findAllDemandPending();
+}
 
 export const findAllDemandEvent = async () => {
     return await findAllDemand();
@@ -10,6 +17,14 @@ export const findAllDemandEvent = async () => {
 
 export const findDemandByIdEvent = async (id) => {
     return await findDemandById(id);
+}
+
+export const pdfByIdEvent = async (id) => {
+    return await pdfById(id);
+}
+
+export const findAllDemandByErrorTypeEvent = async (type) => {
+    return await findAllDemandByErrorType(type);
 }
 
 export const findAllDemandPagedEvent = async (page, limit = 8) => {

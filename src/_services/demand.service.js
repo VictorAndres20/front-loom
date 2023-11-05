@@ -7,8 +7,24 @@ export const findAllDemand = async () => {
     return await handleFetch(`${BASE_PATH}/all`, GET_OPTIONS);
 }
 
+export const findAllDemandPending = async () => {
+    return await handleFetch(`${BASE_PATH}/all/pending`, GET_OPTIONS);
+}
+
+export const findAllDemandByErrorType = async (type) => {
+    return await handleFetch(`${BASE_PATH}/all/type/${type}`, GET_OPTIONS);
+}
+
 export const findDemandById = async (id) => {
     return await handleFetch(`${BASE_PATH}/id/${id}`, GET_OPTIONS);
+}
+
+export const solveDemandById = async (id) => {
+    return await handleFetch(`${BASE_PATH}/solve/${id}`, GET_OPTIONS);
+}
+
+export const pdfById = async (id) => {
+    return await handleFetch(`${BASE_PATH}/pdf/${id}`, GET_OPTIONS);
 }
 
 export const createDemand = async (body) => {

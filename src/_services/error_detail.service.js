@@ -7,6 +7,10 @@ export const findAllErrorDetail = async () => {
     return await handleFetch(`${BASE_PATH}/all`, GET_OPTIONS);
 }
 
+export const findAllErrorDetailByType = async (type) => {
+    return await handleFetch(`${BASE_PATH}/all/type/${type}`, GET_OPTIONS);
+}
+
 export const findErrorDetailById = async (id) => {
     return await handleFetch(`${BASE_PATH}/id/${id}`, GET_OPTIONS);
 }

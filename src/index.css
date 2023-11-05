@@ -27,6 +27,13 @@
   width: 900px;
 }
 
+.vp-label {
+  margin-top: 20px;
+  margin-bottom: 8px; 
+  font-weight: bold; 
+  font-size: 0.9em;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

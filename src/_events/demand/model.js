@@ -1,4 +1,5 @@
 import { isBlank } from "../../_utils/is_blank";
+import { getUserId } from "../../_utils/storage_handler";
 
 export const validateDemand = (body) => {
     const { error_detail, loom } = body;
@@ -20,8 +21,11 @@ export const buildEmptyDemand = () => {
     return {
         uuid: '',
         warp: '',
-        weft_quantity: '',
+        weft_quantity: 0,
         error_detail: '',
         loom: '',
+        user_create: getUserId(),
+        user_close: getUserId(),
+        demand_state: 'PENDI',
     };
 }

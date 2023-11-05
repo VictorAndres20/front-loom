@@ -13,9 +13,11 @@ export const useDemandCreate = () => {
         .then(json => {
             setLoading(false);
             setEntity(buildEmptyDemand());
+            alert("Solicitud generada");
         })
         .catch(err => {
             setLoading(false);
+            alert(err.emssage);
         });
     }
 

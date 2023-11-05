@@ -1,12 +1,17 @@
 import {
     createDemand,
     editDemand,
+    solveDemandById,
 } from '../../_services/demand.service';
 import { validateDemand } from './model';
 
 export const createDemandEvent = async (body) => {
     validateDemand(body);
     return await createDemand(body);
+}
+
+export const solveDemandByIdEvent = async (id) => {
+    return await solveDemandById(id);
 }
 
 export const editDemandEvent = async (id, body) => {

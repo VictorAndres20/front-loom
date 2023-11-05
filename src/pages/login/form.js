@@ -14,8 +14,9 @@ export default function LoginForm(){
 
     return(
         <div>
-            <Form.Label>Usuario</Form.Label>
+            <div className="vp-label">Usuario</div>
             <Form.Control
+                placeholder="Usuario..."
                 onKeyUp={pressEnter}
                 onChange={(e) => {
                     let ent = {...hook.entity}
@@ -25,8 +26,9 @@ export default function LoginForm(){
                 value={ hook.entity?.login }
                 type="text"
             />
-            <Form.Label style={{ marginTop: '20px' }}>Contraseña</Form.Label>
+            <div className="vp-label">Contraseña</div>
             <Form.Control
+                placeholder="****..."
                 onKeyUp={pressEnter}
                 onChange={(e) => {
                     let ent = {...hook.entity}

@@ -1,23 +1,22 @@
 import { useEffect, useState } from "react"
-import { findAllErrorTypeEvent } from "../../_events/error_type/find.event";
+import { findAllErrorDetailByTypeEvent } from "../../_events/error_detail/find.event";
 
-export const useFindAllErrorType = () => {
-
+export const useFindErrorDetailsByType = (type) => {
     const [ data, setData ] = useState([]);
 
-    const loadData = () => {
-        findAllErrorTypeEvent()
+    const loadData = (t) => {
+        findAllErrorDetailByTypeEvent(t)
         .then(json => {
             setData(json.list);
         })
         .catch(err => {
             alert(err.message);
         });
-    }
+    };
 
     useEffect(() => {
-        loadData();
-    }, []);
+        loadData(type);
+    }, [type]);
 
     return {
         data,
