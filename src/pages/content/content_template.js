@@ -2,7 +2,6 @@ import React from "react";
 import { Button, Col, Container, Form, Nav, NavDropdown, Navbar, Row } from "react-bootstrap";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { content_menu } from "../menu_pages";
-import ChangePassModal from "../../widgets /modals/change_pass_modal";
 import { cleanValues } from "../../_utils/storage_handler";
 import { login_page_path } from "../path_pages";
 
@@ -45,8 +44,7 @@ export default function ContentTemplate(){
                             })
                         }
                     </Nav>
-                    <Form className="justify-content-end">
-                        <ChangePassModal />      
+                    <Form className="justify-content-end">     
                         <Button onClick={() => {
                             cleanValues();
                             navigate(login_page_path.full_path);

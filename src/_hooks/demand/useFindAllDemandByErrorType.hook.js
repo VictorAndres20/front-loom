@@ -28,6 +28,11 @@ export const useFindAllDemandByErrorType = (type) => {
 
     useEffect(() => {
         loadData(type);
+        const intervalId = setInterval(() => {  //assign interval to a variable to clear it.
+            loadData(type);
+        }, 10000);
+        
+        return () => clearInterval(intervalId);
     }, [type]);
 
     return {

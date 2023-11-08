@@ -1,12 +1,11 @@
 import React from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import Select from 'react-select';
 import { useFindAllErrorType } from "../../../_hooks/error_type/useFindAllErrorType.hook";
 import { useDemandCreate } from "../../../_hooks/demand/useGenerate.hook";
 import ErrorDetail from "./errot_detail";
 import { isBlank } from "../../../_utils/is_blank";
 
-const loom_numbers = Array.from({ length: 300 }, (_, index) => (index + 1).toString() );
+//const loom_numbers = Array.from({ length: 300 }, (_, index) => (index + 1).toString() );
 
 export default function GenerateForm(){
 
@@ -43,7 +42,7 @@ export default function GenerateForm(){
                                 </div>
                                 {
                                     errorTypeAllHook.data.map( ( element, key ) => (
-                                        <Col lg={4} md={6} sm={6} xs={6} key = { `col_${key}` } style={{ margin: '10px 0' }}>
+                                        <Col lg={3} md={6} sm={6} xs={6} key = { `col_${key}` } style={{ margin: '10px 0' }}>
                                             <Button
                                                 style={{ width: '95%' }}
                                                 onClick={() => {
@@ -84,10 +83,10 @@ export default function GenerateForm(){
                                 <div className="flex-col flex-center" style={{ width: '100%', marginTop: '-25px' }}>
                                     <span className="vp-label">Número de telar</span>
                                 </div>
-                                <Col lg={6}>
-                                    <div className="flex-col flex-center" style={{ width: '100%' }}>
+                                <Col lg={12}>
+                                    <div className="flex-col flex-center" style={{ width: '100%', margin: '10px 0' }}>
                                         <Form.Control 
-                                            type="text"
+                                            type="number"
                                             placeholder="Escribe el número"
                                             onChange={(e) => {
                                                 let ent = { ...createHook.entity };
@@ -98,8 +97,10 @@ export default function GenerateForm(){
                                         />
                                     </div>
                                 </Col>
-                                <Col lg={6}>
-                                    <div className="flex-col flex-center" style={{ width: '100%' }}>
+                                {
+                                    /*
+                                    <Col lg={6}>
+                                    <div className="flex-col flex-center" style={{ width: '100%', margin: '10px 0' }}>
                                         <Select
                                             value={{ label: createHook.entity.loom, value: createHook.entity.loom }}
                                             placeholder='O selecciona el número'
@@ -123,6 +124,8 @@ export default function GenerateForm(){
                                         />
                                     </div>
                                 </Col>
+                                    */
+                                }
                             </Row>
                         </Container>
                         <hr />
